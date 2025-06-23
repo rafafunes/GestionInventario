@@ -1,0 +1,185 @@
+{
+	"info": {
+		"_postman_id": "b3d557ed-a566-4f15-b4ab-320e5a18bdd1",
+		"name": "Gestion Inventario",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23803214"
+	},
+	"item": [
+		{
+			"name": "Inventario",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/inventario",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"inventario"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Ordenes por Estado",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/ordenes-compra?estado=pendiente",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"ordenes-compra"
+					],
+					"query": [
+						{
+							"key": "estado",
+							"value": "pendiente"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear proveedor",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nombre\": \"Tecnología Global\",\r\n  \"contacto\": \"Rafael Funes\",\r\n  \"direccion\": \"Av. Libertad, San Salvador\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/crear-proveedor",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"crear-proveedor"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear producto",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"codigo\": \"PRD-004\",\r\n  \"descripcion\": \"Monitor Samsung 24 pulgadas\",\r\n  \"precioUnitario\": 175.50,\r\n  \"cantidadInicial\": 10\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/crear-producto",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"crear-producto"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Orden Recibida - Actualizar Inven",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/ordenes-compra/1/recibir",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"ordenes-compra",
+						"1",
+						"recibir"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear Orden de Compra",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"idProveedor\": 3,\r\n  \"estado\": \"pendiente\",\r\n  \"detalles\": [\r\n    {\r\n      \"productoId\": 1,\r\n      \"cantidad\": 1,\r\n      \"precioUnitario\": 599.95\r\n    },\r\n    {\r\n      \"productoId\": 3,\r\n      \"cantidad\": 1,\r\n      \"precioUnitario\": 45.50\r\n    }\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/crear-orden-compra",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"crear-orden-compra"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
