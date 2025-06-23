@@ -11,6 +11,7 @@ Este proyecto es una API REST que ha sido desarrollada con **Java Spring Boot** 
 - Spring Data JPA
 - PostgreSQL
 - Maven
+- Swagger OpenAPI
 
 ---
 
@@ -121,6 +122,15 @@ El servidor iniciará en: (http://localhost:8080)
     "cantidadInicial": 15
   }
   ```
+
+---
+
+## 📘 Documentación Swagger
+
+Accede a la documentación Swagger UI:
+
+- http://localhost:8080/swagger-ui.html
+- http://localhost:8080/v3/api-docs
 
 ---
 
