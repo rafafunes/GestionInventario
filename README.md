@@ -1,10 +1,10 @@
-# 📦 Sistema de Gestión de Inventario y Órdenes de Compra
+# Sistema de Gestión de Inventario y Órdenes de Compra
 
 Este proyecto es una API REST que ha sido desarrollada con **Java Spring Boot** y base de datos **PostgreSQL**, que permite gestionar proveedores, productos, inventario y órdenes de compra.
 
 ---
 
-## 🚀 Tecnologías usadas
+## Tecnologías usadas
 
 - Java 21+
 - Spring Boot
@@ -15,7 +15,7 @@ Este proyecto es una API REST que ha sido desarrollada con **Java Spring Boot** 
 
 ---
 
-## ⚙️ Configuración inicial
+## Configuración inicial
 
 ### 1. Clonar el repositorio
 
@@ -55,18 +55,18 @@ El servidor iniciará en: (http://localhost:8080)
 
 ---
 
-## 📮 Endpoints disponibles
+## Endpoints disponibles
 
 > Base URL: `/api`
 
-### 📦 Inventario
+### Inventario
 
 - `GET /api/inventario`  
   Consulta el stock actual por producto (DTO con cantidades, nombres, etc.)
 
 ---
 
-### 🧾 Órdenes de compra
+### Órdenes de compra
 
 - `GET /api/ordenes-compra?estado=PENDIENTE`  
   Lista órdenes por estado (`PENDIENTE`, `RECIBIDA`, etc.)
@@ -93,7 +93,7 @@ El servidor iniciará en: (http://localhost:8080)
 
 ---
 
-### 🏢 Proveedores
+### Proveedores
 
 - `POST /api/crear-proveedor`  
   Crea un proveedor
@@ -108,7 +108,7 @@ El servidor iniciará en: (http://localhost:8080)
 
 ---
 
-### 🛒 Productos
+### Productos
 
 - `POST /api/crear-producto`  
   Crea un producto.  
@@ -125,33 +125,34 @@ El servidor iniciará en: (http://localhost:8080)
 
 ---
 
-## 📘 Documentación Swagger
+## Documentacion Swagger
 
-Accede a la documentación Swagger UI:
+Accede a la documentacion Swagger UI:
 
 - http://localhost:8080/swagger-ui.html
 - http://localhost:8080/v3/api-docs
 
 ---
 
-## 📁 Estructura del proyecto
+
+## Estructura del proyecto
 
 ```
-├── controller
-│   └── InventarioOrdenCompraController.java
-├── dto
-│   └── OrdenCompraRequestDTO.java, OrdenCompraResponseDTO.java, InventarioDTO.java
-├── model
-│   └── Producto.java, Proveedor.java, OrdenCompra.java, OrdenCompraDetalle.java, Inventario.java
-├── repository
-│   └── ProductoRepository.java, InventarioRepository.java, etc.
-├── service
-│   └── interfaces y servicios implementados
+controller
+	InventarioOrdenCompraController.java
+dto
+	OrdenCompraRequestDTO.java, OrdenCompraResponseDTO.java, InventarioDTO.java
+model
+	Producto.java, Proveedor.java, OrdenCompra.java, OrdenCompraDetalle.java, Inventario.java
+repository
+	ProductoRepository.java, InventarioRepository.java, etc.
+service
+	interfaces y servicios implementados
 ```
 
 ---
 
-## 🛡️ Notas
+## Notas
 
 - No se permite crear órdenes sin productos.
 - Las órdenes ya `RECIBIDAS` no pueden ser marcadas de nuevo.
@@ -159,6 +160,6 @@ Accede a la documentación Swagger UI:
 
 ---
 
-## 👨‍💻 Autor
+## Autor
 
 Desarrollado por [Rafael Funes].
